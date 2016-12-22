@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <LineChart fx:id="bc" layoutY="200.0" prefHeight="288.0" prefWidth="616.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="284.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" fx:id="xAxis" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis fx:id="yAxis" side="LEFT" />
+        </yAxis>
+      </LineChart>
+      <PieChart fx:id="pieChart" layoutX="14.0" layoutY="14.0" prefHeight="257.0" prefWidth="373.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0" />
+      <BarChart fx:id="barChart" layoutX="634.0" layoutY="270.0" prefHeight="288.0" prefWidth="282.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="-16.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </BarChart>
+      <TabPane layoutX="416.0" layoutY="14.0" prefHeight="297.0" prefWidth="470.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.leftAnchor="416.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+        <tabs>
+          <Tab text="Main system info">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="209.0" prefWidth="461.0">
+                     <children>
+                        <Label layoutX="22.0" layoutY="26.0" text="Operation system" />
+                        <Label fx:id="labelOS" layoutX="154.0" layoutY="26.0" text="Label" />
+                        <Label layoutX="22.0" layoutY="74.0" text="Core's count" />
+                        <Label fx:id="labelCore" layoutX="154.0" layoutY="74.0" text="Label" />
+                        <Label layoutX="22.0" layoutY="107.0" text="System root" />
+                        <Label fx:id="root" layoutX="154.0" layoutY="107.0" text="Label" />
+                        <Label layoutX="22.0" layoutY="142.0" text="Free HDD space" />
+                        <Label layoutX="22.0" layoutY="174.0" text="Usage HDD space" />
+                        <Label fx:id="freeHdd" layoutX="154.0" layoutY="142.0" text="Label" />
+                        <Label fx:id="usageHdd" layoutX="154.0" layoutY="174.0" text="Label" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="All system info">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextArea fx:id="textArea" prefHeight="270.0" prefWidth="470.0" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
