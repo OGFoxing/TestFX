@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="TestFX:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/TestFX_jar</output-path>
+    <root id="archive" name="TestFX.jar">
+      <element id="module-output" name="TestFX" />
+    </root>
+  </artifact>
+</component>
